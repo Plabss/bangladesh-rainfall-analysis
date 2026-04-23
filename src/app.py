@@ -9,7 +9,7 @@ st.set_page_config(page_title="Bangladesh Rainfall Analytics", layout="wide")
 # --- LOAD DATA ---
 @st.cache_data # This caches the data so it doesn't reload on every click
 def load_data():
-    df = pd.read_csv("../data/rainfall.csv")
+    df = pd.read_csv("data/rainfall.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     return df
 
